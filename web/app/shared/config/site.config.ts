@@ -70,13 +70,13 @@ export function siteThemeCssVars(theme: SiteTheme): Record<string, string> {
 
 export const siteConfig = {
   /** Shown in the top bar, document title, and other UI */
-  name: "Bykänsla",
+  name: "Lineroligt",
 
   htmlLang: "sv",
 
   metadata: {
-    title: "Bykänsla",
-    description: "Din by",
+    title: "Lineroligt",
+    description: "Din stadsdel",
   },
 
   brand: {
@@ -84,7 +84,7 @@ export const siteConfig = {
      * Shown in the square mark when `markImageSrc` is not set.
      * Use one character for the default layout, or a short abbreviation.
      */
-    markLetter: "B",
+    markLetter: "L",
     /**
      * Optional image for the square mark (path under `public/`).
      * When set, this replaces the letter mark.
@@ -100,13 +100,13 @@ export const siteConfig = {
   /**
    * Local area name used in headings (e.g. "Vad händer i …").
    */
-  areaName: "Min lilla by",
+  areaName: "Lineroligt",
 
   /**
    * Geography configuration for the local area.
    * Used to filter events and items to this specific area.
    */
-  geography: {
+  geographyxx:{
     // Central Stockholm — adjust center/bounds when targeting a specific stadsdel
     center: [18.0686, 59.3293] as [number, number], // [longitude, latitude]
     maxDistanceKm: 2,
@@ -118,6 +118,21 @@ export const siteConfig = {
     },
     keywords: ["minby", "östra byn", "vår by", "mina byn", "lilla byn"],
   },
+
+
+geography: {
+  // Östra Lund (ca Östra Torn / Brunnshög-området)
+  center: [13.25, 55.705] as [number, number], // [longitude, latitude]
+  maxDistanceKm: 2,
+  bounds: {
+    minLng: 13.20,
+    maxLng: 13.30,
+    minLat: 55.68,
+    maxLat: 55.73,
+  },
+  keywords: ["minby", "östra byn", "vår by", "mina byn", "lilla byn"],
+},
+
 
   /** Core UI colors — applied in root layout as CSS variables. */
   theme: siteTheme,
